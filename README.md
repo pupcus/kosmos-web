@@ -1,14 +1,21 @@
 # kosmos-web
 
-A Clojure library designed to ... well, that part is up to you.
+A Kosmos component for starting a web server. Provides a RingJettyComponent that uses Ring's Jetty adapter.
 
-## Usage
+## Example Configuration 
+
+```clj
+   {:web 
+     {:kosmos/init kosmos.web/RingJettyComponent
+      :port 1111
+      :ring-app some-ring-app
+      :app-init init-fn}}
+```
+
+The `some-ring-app` is the app var itself. The `init-fn` is a user-supplied function that does any initialization the Ring app such as setting up middleware.
 
 FIXME
 
 ## License
 
-Copyright © 2016 FIXME
-
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Kosmos is distributed under the [Eclipse Public License](http://opensource.org/licenses/eclipse-1.0.php), the same as Clojure.
