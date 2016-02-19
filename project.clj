@@ -1,10 +1,13 @@
-(defproject kosmos-web "0.0.1-SNAPSHOT"
+(defproject kosmos/kosmos-web "0.0.1-SNAPSHOT"
 
   :description "simple ring web server component"
 
   :url "https://bitbucket.org/pupcus/kosmos-web"
 
   :scm {:url "git@bitbucket.org:bitbucket/kosmos-web"}
+
+  :license {:name "Eclipse Public License"
+            :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[kosmos "0.0.2-SNAPSHOT"]
                  [ring/ring-jetty-adapter "1.4.0"]]
