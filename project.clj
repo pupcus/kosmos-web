@@ -9,7 +9,7 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.2-SNAPSHOT"]
+  :dependencies [[kosmos "0.0.3"]
                  [ring/ring-jetty-adapter "1.4.0"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
