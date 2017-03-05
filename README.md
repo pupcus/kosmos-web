@@ -2,6 +2,8 @@
 
 A Kosmos component for starting a web server. Provides a RingJettyComponent that uses Ring's Jetty adapter.
 
+[![Clojars Project](https://img.shields.io/clojars/v/kosmos/kosmos-web.svg)](https://clojars.org/kosmos/kosmos-web)
+
 ## Example Configuration 
 
 ```clj
