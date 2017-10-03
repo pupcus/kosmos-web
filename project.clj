@@ -10,14 +10,14 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[kosmos "0.0.6"]
-                 [ring/ring-jetty-adapter "1.5.1"]]
+                 [ring/ring-jetty-adapter "1.6.2"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
                    :dependencies [[org.clojure/clojure "1.8.0"]
                                   [org.clojure/tools.reader "1.0.0-beta4"]
                                   [clj-http "2.2.0"]
-                                  [org.eclipse.jetty/jetty-servlets "9.2.10.v20150310"]
-                                  [org.eclipse.jetty/jetty-xml "9.2.10.v20150310"]]}}
+                                  [org.eclipse.jetty/jetty-servlets "9.2.21.v20170120"]
+                                  [org.eclipse.jetty/jetty-xml "9.2.21.v20170120"]]}}
 
   :test-selectors {:default (complement (some-fn :integration))
                    :integration :integration
