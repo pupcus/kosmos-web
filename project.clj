@@ -1,4 +1,4 @@
-(defproject kosmos/kosmos-web "0.0.4"
+(defproject kosmos/kosmos-web "0.0.5-SNAPSHOT"
 
   :description "simple ring web server component"
 
