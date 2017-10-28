@@ -25,7 +25,18 @@
 
   :deploy-repositories [["snapshots"
                          {:url "https://clojars.org/repo"
+                          :sign-releases false
                           :creds :gpg}]
                         ["releases"
                          {:url "https://clojars.org/repo"
-                          :creds :gpg}]])
+                          :sign-releases false
+                          :creds :gpg}]]
+
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["deploy"]
+                  ["change" "version" "leiningen.release/bump-version"]
+                  ["vcs" "commit"]
+                  ["vcs" "push"]])
