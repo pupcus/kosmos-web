@@ -2,9 +2,9 @@
 
   :description "simple ring web server component"
 
-  :url "https://bitbucket.org/pupcus/kosmos-web"
+  :url "https://github.com/pupcus/kosmos-web"
 
-  :scm {:url "git@bitbucket.org:bitbucket/kosmos-web"}
+  :scm {:url "git@github.com:pupcus/kosmos-web.git"}
 
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
