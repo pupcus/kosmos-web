@@ -1,4 +1,4 @@
-(defproject kosmos/kosmos-web "0.0.6-SNAPSHOT"
+(defproject kosmos/kosmos-web "0.0.8-SNAPSHOT"
 
   :description "simple ring web server component"
 
@@ -9,27 +9,25 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.7"]
-                 [ring/ring-jetty-adapter "1.6.2"]]
+  :dependencies [[kosmos "0.0.11"]
+                 [ring/ring-jetty-adapter "1.8.0" :exclude org.eclipse.jetty/jetty-server]
+                 [org.eclipse.jetty/jetty-server "9.4.24.v20191120"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
-                   :dependencies [[org.clojure/clojure "1.8.0"]
-                                  [clj-http "3.7.0"]
-                                  [org.eclipse.jetty/jetty-servlets "9.2.21.v20170120"]
-                                  [org.eclipse.jetty/jetty-xml "9.2.21.v20170120"]]}}
+                   :dependencies [[org.clojure/clojure "1.10.1"]
+                                  [clj-http "3.10.0"]
+                                  [org.eclipse.jetty/jetty-servlets "9.4.24.v20191120"]
+                                  [org.eclipse.jetty/jetty-xml "9.4.24.v20191120"]]}}
 
   :test-selectors {:default (complement (some-fn :integration))
                    :integration :integration
                    :all (fn [m] true)}
 
-  :deploy-repositories [["snapshots"
-                         {:url "https://clojars.org/repo"
-                          :sign-releases false
-                          :creds :gpg}]
-                        ["releases"
-                         {:url "https://clojars.org/repo"
-                          :sign-releases false
-                          :creds :gpg}]]
+
+
+  :deploy-repositories {"releases" {:url "https://clojars.org/repo" :creds :gpg :sign-releases false}
+                        "snapshots" {:url "https://clojars.org/repo" :creds :gpg :sign-releases false}}
+
 
   :release-tasks [["vcs" "assert-committed"]
                   ["change" "version" "leiningen.release/bump-version" "release"]

@@ -42,5 +42,5 @@
   (stop [{:keys [server] :as component}]
     (log/info "Stopping Ring-based Jetty server component.")
     (when server
-      (.stop server))
+      (.stop ^org.eclipse.jetty.server.Server server))
     (dissoc component :server)))

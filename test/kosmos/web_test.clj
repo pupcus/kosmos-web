@@ -1,6 +1,6 @@
 (ns kosmos.web-test
   (:require [clojure.test :refer :all]
-            [clojure.tools.reader.edn :as edn]
+            [clojure.edn :as edn]
             [clj-http.client :as http]
             [com.stuartsierra.component :as component]
             [kosmos.web :refer :all])
