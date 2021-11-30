@@ -11,15 +11,15 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[kosmos "0.0.12"]
-                 [ring/ring-jetty-adapter "1.8.2" :exclude org.eclipse.jetty/jetty-server]
-                 [org.eclipse.jetty/jetty-server "9.4.31.v20200723"]]
+  :dependencies [[kosmos "0.0.13"]
+                 [ring/ring-jetty-adapter "1.9.4" :exclude org.eclipse.jetty/jetty-server]
+                 [org.eclipse.jetty/jetty-server "9.4.42.v20210604"]]
 
   :profiles {:dev {:resource-paths ["dev-resources"]
-                   :dependencies [[org.clojure/clojure "1.10.1"]
-                                  [clj-http "3.11.0"]
-                                  [org.eclipse.jetty/jetty-servlets "9.4.31.v20200723"]
-                                  [org.eclipse.jetty/jetty-xml "9.4.31.v20200723"]]}}
+                   :dependencies [[org.clojure/clojure "1.10.3"]
+                                  [clj-http "3.12.3"]
+                                  [org.eclipse.jetty/jetty-servlets "9.4.42.v20210604"]
+                                  [org.eclipse.jetty/jetty-xml "9.4.42.v20210604"]]}}
 
   :test-selectors {:default (complement (some-fn :integration))
                    :integration :integration
