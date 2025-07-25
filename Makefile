@@ -1,5 +1,5 @@
 # -----
-#  Makefile for kosmos-nrepl
+#  Makefile for kosmos-web
 #
 
 #
@@ -27,7 +27,7 @@ dev:	deps
 	@${CLOJURE} -M:dev:overrides
 
 test:	deps
-	@${CLOJURE} -M:test -m kaocha.runner
+	@${CLOJURE} -M:test
 
 attach: PORT=$(shell cat .nrepl-port)
 attach:
